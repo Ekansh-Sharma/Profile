@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FirstRails</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <%= javascript_include_tag 'game3' %>
+  <%= javascript_include_tag 'js/classlist_polyfill' %>
+  <%= javascript_include_tag 'js/animframe_polyfill' %>
+  <%= javascript_include_tag 'js/keyboard_input_manager' %>
+  <%= javascript_include_tag 'js/html_actuator' %>
+  <%= javascript_include_tag 'js/grid' %>
+  <%= javascript_include_tag 'js/tile' %>
+  <%= javascript_include_tag 'js/local_storage_manager' %>
+  <%= javascript_include_tag 'js/game_manager' %>
+  <%= javascript_include_tag 'js/application' %>
+  <%= javascript_include_tag 'js1/bind_polyfill' %>
+  <%= javascript_include_tag 'js1/classlist_polyfill' %>
+  <%= javascript_include_tag 'js1/animframe_polyfill' %>
+  <%= javascript_include_tag 'js1/keyboard_input_manager' %>
+  <%= javascript_include_tag 'js1/html_actuator' %>
+  <%= javascript_include_tag 'js1/tile' %>
+  <%= javascript_include_tag 'js1/local_storage_manager' %>
+  <%= javascript_include_tag 'js1/game_manager' %>
+  <%= javascript_include_tag 'js1/application' %>
+  <script type="text/javascript">
+function goToPage(url)
+ {
+  //debugger
+ // console.log(url.value);
+ //if (url != "")
+ //{
+ 	//alert('working');
+ window.location.href=url.value;
+ //}
+ }
+  </script>
+
+
+  <link href="/assets/style/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+<div id="menu">
+  <p class="menu"><%= link_to 'Blog', controller: 'blogs' %></p>
+  <p class="menu"><a href="/firstrail/home">Home</a></p>
+  <p class="menu"><a href="/firstrail/aboutme">About Me</a></p>
+  <p class="menu"><a href="/firstrail/contactme">Contact me</a></p>
+  <p class="menu"><a href="/firstrail/technology">Technologies</a></p>
+  <p class="menu">
+  	<select onchange="goToPage(this)">
+      <option selected>Game</option>
+  		<option value="/game1/index">2058</option>
+  		<option value="/game2/index">2458</option>
+  		<option value="/game3/index">Color-Flood</option>
+  	</select>
+  </p>
+  
+</div>
+<%= yield %>
+
+</body>
+</html>

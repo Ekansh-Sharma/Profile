@@ -1,0 +1,23 @@
+<div class="pageindex">
+<table>
+	<tr>
+		<td class="intable"><h1>Title</h1></td>
+		<td class="intable"><h1>Body</h1></td>
+	</tr>
+	<% @blog.each do |blog|%>
+	<tr>
+		<td class="intable"><%= blog.title%></td>
+		<td class="intable"><%= blog.body%></td>
+		<td class="intable"><%= link_to 'Show',blog_path(blog)%></td>
+		<td class="intable"><%= link_to 'Edit',edit_blog_path(blog)%></td>
+		<td class="intable"><%= link_to 'Destroy', blog_path(blog),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+	</tr>
+	<%end%>
+	<tr>
+		<td class="intable"><%= link_to 'New',new_blog_path %></td>
+		<td></td>
+	</tr>
+</table>
+</div>
