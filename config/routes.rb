@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
-  get 'firstrail/index', to: 'firstrail#index'
-  get 'firstrail/aboutme', to: 'firstrail#aboutme'
-  get 'firstrail/contactme', to: 'firstrail#contactme'
-  get 'firstrail/technology', to: 'firstrail#technology'
-  get 'firstrail/home'
-  get 'game1/index' 
-  get 'game2/index' 
-  get 'game3/index'
+  get '/index', to: 'firstrail#index'
+  get '/aboutme', to: 'firstrail#aboutme'
+  get '/contactme', to: 'firstrail#contactme'
+  get '/technology', to: 'firstrail#technology'
+  get '/home', to: 'firstrail#home'
+  get '/game1', to: 'game1#index'
+  get '/game2', to: 'game2#index'
+  get '/game3', to: 'game3#index'
+
+
+  
+
   resources :blogs do 
     resources :comments
   end

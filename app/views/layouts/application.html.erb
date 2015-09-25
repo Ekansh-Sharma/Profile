@@ -45,16 +45,16 @@ function goToPage(url)
 <body>
 <div id="menu">
   <p class="menu"><%= link_to 'Blog', controller: 'blogs' %></p>
-  <p class="menu"><a href="/firstrail/home">Home</a></p>
-  <p class="menu"><a href="/firstrail/aboutme">About Me</a></p>
-  <p class="menu"><a href="/firstrail/contactme">Contact me</a></p>
-  <p class="menu"><a href="/firstrail/technology">Technologies</a></p>
+  <p class="menu"><a href=<%= home_path%>>Home</a></p>
+  <p class="menu"><a href=<%= aboutme_path %>>About Me</a></p>
+  <p class="menu"><a href=<%= contactme_path %>>Contact me</a></p>
+  <p class="menu"><a href=<%= technology_path %>>Technologies</a></p>
   <p class="menu">
   	<select onchange="goToPage(this)">
       <option selected>Game</option>
-  		<option value="/game1/index">2058</option>
-  		<option value="/game2/index">2458</option>
-  		<option value="/game3/index">Color-Flood</option>
+  		<option value=<%= game1_path %>>2058</option>
+  		<option value=<%= game2_path %>>2458</option>
+  		<option value=<%= game3_path %>>Color-Flood</option>
   	</select>
   </p>
   
